@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHAKIL TREND</title>
+  <style>
+    :root {
+      --bg-light: #ffffff;
+      --text-light: #1a1a1a;
+      --bg-dark: #121212;
+      --text-dark: #f0f0f0;
+      --primary-color: #40e0d0; /* Turkuaz */
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      transition: background 0.3s, color 0.3s;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+    }
+
+    body.dark-theme {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    header {
+      padding: 1rem;
+      background-color: var(--primary-color);
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      margin: 0 10px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 2rem;
+    }
+
+    button.theme-toggle {
+      background: none;
+      border: 2px solid #fff;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>CHAKIL TREND</strong></div>
+    <nav>
+      <a href="#">Anasayfa</a>
+      <a href="#hakkimda">Hakkımda</a>
+    </nav>
+    <button class="theme-toggle" onclick="toggleTheme()">Tema Değiştir</button>
+  </header>
+
+  <div class="container">
+    <h1>Hoş geldin CHAKIL TREND'e</h1>
+    <p>Tarzın ayak izini bırak: Chakıl ayakkabılarla kendi stilini yarat.</p>
+  </div>
+
+  <div class="container" id="hakkimda">
+    <h2>Hakkımda</h2>
+    <p>CHAKIL TREND, XNALİST'in vizyonuyla doğmuş bir markadır. Sokak stilini, rahatlığı ve kaliteyi birleştirerek herkesin tarzını yansıtmasına olanak tanır.</p>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark-theme');
+    }
+  </script>
+</body>
+</html>
